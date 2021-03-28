@@ -2,18 +2,19 @@
 1616347550 source:d:\repo\alg-prog-2021\asd-proj\main.cpp
 	<iostream>
 
-1616948417 source:d:\repo\alg-prog-2021\asd-proj\periodnaive.cpp
+1616960445 source:d:\repo\alg-prog-2021\asd-proj\periodnaive.cpp
 	<iostream>
+	<NaiveAlgorithm.h>
 
-1616948815 source:d:\repo\alg-prog-2021\asd-proj\src\baserunnablealgorithm.cpp
+1616956069 source:d:\repo\alg-prog-2021\asd-proj\src\baserunnablealgorithm.cpp
 	"BaseRunnableAlgorithm.h"
 
-1616949124 d:\repo\alg-prog-2021\asd-proj\include\baserunnablealgorithm.h
+1616961822 d:\repo\alg-prog-2021\asd-proj\include\baserunnablealgorithm.h
 
-1616949450 source:d:\repo\alg-prog-2021\asd-proj\src\naivealgorithm.cpp
+1616960636 source:d:\repo\alg-prog-2021\asd-proj\src\naivealgorithm.cpp
 	"NaiveAlgorithm.h"
 
-1616949448 d:\repo\alg-prog-2021\asd-proj\include\naivealgorithm.h
+1616961908 d:\repo\alg-prog-2021\asd-proj\include\naivealgorithm.h
 	<iostream>
 	"BaseRunnableAlgorithm.h"
 

@@ -31,25 +31,46 @@ int periodNaive(string str)
     return p;
 }
 
+typedef enum ALGORITHM_TYPES:int {PERIOD_NAIVE=0,PERIOD_SMART=1};
+
 int main()
 {
-    // string str;
+    string str;
+    ALGORITHM_TYPES selectedAlgorithm {0};
     // cin >> str;
     // int p = periodNaive(str);
     // cout << p;
 
     // select algorithm
+        { // Scope of algorithm
+            BaseRunnableAlgorithm* algorithm;
+            switch(selectedAlgorithm)
+            {
+                case ALGORITHM_TYPES::PERIOD_NAIVE:
+                {
+                    algorithm = new NaiveAlgorithm();
+                    break;
+                }
+                case ALGORITHM_TYPES::PERIOD_SMART:
+                {
 
-    NaiveAlgorithm algorithm = NaiveAlgorithm();
+                    break;
+                }
+                default:
+                    break;
+            }
 
-    algorithm.Setup();
 
+            algorithm->Setup();
 
-    // insert start rec time
-    algorithm.Execute();
-    // end rec time
+            // insert start rec time
+            algorithm->Execute();
+            // end rec time
 
-    // save data
+            // save data
 
+            // free
+            delete algorithm;
+        }
     return 0;
 }

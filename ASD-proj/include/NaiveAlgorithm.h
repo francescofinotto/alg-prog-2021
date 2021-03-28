@@ -6,10 +6,11 @@
 class NaiveAlgorithm: public BaseRunnableAlgorithm
 {
     public:
-        /** Default constructor */
-        NaiveAlgorithm();
         /** Default destructor */
-        virtual ~NaiveAlgorithm();
+        ~NaiveAlgorithm() override { std::cout << "Destroyed Naive Algorithm" << std::endl; }
+
+        /** Default constructor */
+        NaiveAlgorithm() { std::cout<<"Created Naive Algorithm"<<std::endl; };
         void Setup() override
         {
             std::cout<<"Setup"<<std::endl;
@@ -18,9 +19,14 @@ class NaiveAlgorithm: public BaseRunnableAlgorithm
         {
             std::cout<<"Execute"<<std::endl;
         };
+        void* GetDataDescriptor() override
+        {
+
+        };
     protected:
 
     private:
+        char* text;
 };
 
 #endif // NAIVEALGORITHM_H
