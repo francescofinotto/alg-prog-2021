@@ -6,7 +6,7 @@ using namespace std;
 
 bool searchPeriod(string str, int p)
 {
-    for(int i=0; i<str.length()-p-1; i++)
+    for(int i=0; i<str.length()-p; i++)
     {
         if(str[i]!=str[i+p])
         {
