@@ -38,9 +38,11 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/BaseRunnableAlgorithm.h" />
+		<Unit filename="include/Logger.h" />
 		<Unit filename="include/NaiveAlgorithm.h" />
 		<Unit filename="periodNaive.cpp" />
 		<Unit filename="src/BaseRunnableAlgorithm.cpp" />
+		<Unit filename="src/Logger.cpp" />
 		<Unit filename="src/NaiveAlgorithm.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

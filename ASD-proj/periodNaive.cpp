@@ -31,7 +31,7 @@ int periodNaive(string str)
     return p;
 }
 
-enum ALGORITHM_TYPES:int {PERIOD_NAIVE=0,PERIOD_SMART=1};
+enum ALGORITHM_TYPES : int {PERIOD_NAIVE=0,PERIOD_SMART=1};
 
 int main()
 {
