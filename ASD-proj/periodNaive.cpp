@@ -42,35 +42,34 @@ int main()
     // cout << p;
 
     // select algorithm
-        { // Scope of algorithm
-            BaseRunnableAlgorithm* algorithm;
-            switch(selectedAlgorithm)
-            {
-                case ALGORITHM_TYPES::PERIOD_NAIVE:
-                {
-                    algorithm = new NaiveAlgorithm();
-                    break;
-                }
-                case ALGORITHM_TYPES::PERIOD_SMART:
-                {
-                    // add algorithm here
-                    break;
-                }
-                default:
-                    break;
-            }
-
-
-            algorithm->Setup();
-
-            // insert start rec time
-            algorithm->Execute();
-            // end rec time
-
-            // save data
-
-            // free
-            delete algorithm;
+    BaseRunnableAlgorithm* algorithm;
+    switch(selectedAlgorithm)
+    {
+        case ALGORITHM_TYPES::PERIOD_NAIVE:
+        {
+            algorithm = new NaiveAlgorithm();
+            break;
         }
+        case ALGORITHM_TYPES::PERIOD_SMART:
+        {
+            // add algorithm here
+            break;
+        }
+        default:
+            break;
+    }
+
+
+    algorithm->Setup();
+
+    // insert start rec time
+    algorithm->Execute();
+    // end rec time
+
+    // save data
+
+    // free
+    delete algorithm;
+
     return 0;
 }
