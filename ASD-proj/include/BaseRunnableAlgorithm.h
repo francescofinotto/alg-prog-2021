@@ -8,8 +8,10 @@ class BaseRunnableAlgorithm
         /** Default constructor */
         BaseRunnableAlgorithm();
         /** Default destructor */
-        virtual ~BaseRunnableAlgorithm();
-
+        virtual ~BaseRunnableAlgorithm() = 0;
+        virtual void Setup() = 0;
+        virtual void Execute() = 0;
+        virtual void* GetDataDescriptor() = 0;
     protected:
 
     private:

@@ -1,4 +1,6 @@
-#include<iostream>
+#include <iostream>
+#include <NaiveAlgorithm.h>
+
 using namespace std;
 
 #define A 1000
@@ -31,10 +33,23 @@ int periodNaive(string str)
 
 int main()
 {
-    cout<<B<<endl;
-    string str;
-    cin >> str;
-    int p = periodNaive(str);
-    cout << p;
+    // string str;
+    // cin >> str;
+    // int p = periodNaive(str);
+    // cout << p;
+
+    // select algorithm
+
+    NaiveAlgorithm algorithm = NaiveAlgorithm();
+
+    algorithm.Setup();
+
+
+    // insert start rec time
+    algorithm.Execute();
+    // end rec time
+
+    // save data
+
     return 0;
 }
