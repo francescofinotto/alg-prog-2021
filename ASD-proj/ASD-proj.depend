@@ -11,10 +11,17 @@
 
 1616961822 d:\repo\alg-prog-2021\asd-proj\include\baserunnablealgorithm.h
 
-1616960636 source:d:\repo\alg-prog-2021\asd-proj\src\naivealgorithm.cpp
+1616961906 source:d:\repo\alg-prog-2021\asd-proj\src\naivealgorithm.cpp
 	"NaiveAlgorithm.h"
 
-1616961908 d:\repo\alg-prog-2021\asd-proj\include\naivealgorithm.h
-	<iostream>
+1616962748 d:\repo\alg-prog-2021\asd-proj\include\naivealgorithm.h
 	"BaseRunnableAlgorithm.h"
+	"Logger.h"
+
+1616962778 d:\repo\alg-prog-2021\asd-proj\include\logger.h
+	<iostream>
+	<string>
+
+1616962793 source:d:\repo\alg-prog-2021\asd-proj\src\logger.cpp
+	"Logger.h"
 

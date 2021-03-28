@@ -31,7 +31,7 @@ int periodNaive(string str)
     return p;
 }
 
-typedef enum ALGORITHM_TYPES:int {PERIOD_NAIVE=0,PERIOD_SMART=1};
+enum ALGORITHM_TYPES:int {PERIOD_NAIVE=0,PERIOD_SMART=1};
 
 int main()
 {
@@ -53,7 +53,7 @@ int main()
                 }
                 case ALGORITHM_TYPES::PERIOD_SMART:
                 {
-
+                    // add algorithm here
                     break;
                 }
                 default:
