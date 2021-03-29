@@ -10,8 +10,8 @@ class Logger
         Logger();
         /** Default destructor */
         virtual ~Logger();
-        void Log(std::string message);
-        void Log(std::string* message);
+        void Log( std::string message );
+        void Log( std::string* message );
     protected:
 
     private:

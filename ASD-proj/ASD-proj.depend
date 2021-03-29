@@ -2,14 +2,14 @@
 1616347550 source:d:\repo\alg-prog-2021\asd-proj\main.cpp
 	<iostream>
 
-1616960445 source:d:\repo\alg-prog-2021\asd-proj\periodnaive.cpp
+1616963098 source:d:\repo\alg-prog-2021\asd-proj\periodnaive.cpp
 	<iostream>
 	<NaiveAlgorithm.h>
 
 1616956069 source:d:\repo\alg-prog-2021\asd-proj\src\baserunnablealgorithm.cpp
 	"BaseRunnableAlgorithm.h"
 
-1616961822 d:\repo\alg-prog-2021\asd-proj\include\baserunnablealgorithm.h
+1616979108 d:\repo\alg-prog-2021\asd-proj\include\baserunnablealgorithm.h
 
 1616961906 source:d:\repo\alg-prog-2021\asd-proj\src\naivealgorithm.cpp
 	"NaiveAlgorithm.h"
@@ -18,10 +18,15 @@
 	"BaseRunnableAlgorithm.h"
 	"Logger.h"
 
-1616962778 d:\repo\alg-prog-2021\asd-proj\include\logger.h
+1616980737 d:\repo\alg-prog-2021\asd-proj\include\logger.h
 	<iostream>
 	<string>
 
 1616962793 source:d:\repo\alg-prog-2021\asd-proj\src\logger.cpp
 	"Logger.h"
+
+1616980392 source:d:\repo\alg-prog-2021\asd-proj\src\basedatadescriptor.cpp
+	"BaseDataDescriptor.h"
+
+1616980359 d:\repo\alg-prog-2021\asd-proj\include\basedatadescriptor.h
 

@@ -5,8 +5,8 @@
 class BaseRunnableAlgorithm
 {
     public:
-        virtual ~BaseRunnableAlgorithm() {};
-        virtual void Setup() = 0;
+        virtual ~BaseRunnableAlgorithm() {}; // defined baseAlgorithm Destructor
+        virtual void Setup() = 0; // define pure virtual Setup Function
         virtual void Execute() = 0;
         virtual void* GetDataDescriptor() = 0;
     protected:

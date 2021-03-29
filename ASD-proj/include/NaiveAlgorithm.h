@@ -12,6 +12,7 @@ class NaiveAlgorithm: public BaseRunnableAlgorithm
 
         /** Default constructor */
         NaiveAlgorithm() { logger.Log("Created Naive Algorithm"); };
+
         void Setup() override
         {
             logger.Log("Setup");
@@ -29,6 +30,7 @@ class NaiveAlgorithm: public BaseRunnableAlgorithm
     private:
         char* text;
         Logger logger;
+        BaseDataDescriptor descriptor;
 };
 
 #endif // NAIVEALGORITHM_H
