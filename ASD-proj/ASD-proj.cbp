@@ -37,10 +37,12 @@
 			<Add option="-std=gnu++17" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/BaseDataDescriptor.h" />
 		<Unit filename="include/BaseRunnableAlgorithm.h" />
 		<Unit filename="include/Logger.h" />
 		<Unit filename="include/NaiveAlgorithm.h" />
 		<Unit filename="periodNaive.cpp" />
+		<Unit filename="src/BaseDataDescriptor.cpp" />
 		<Unit filename="src/BaseRunnableAlgorithm.cpp" />
 		<Unit filename="src/Logger.cpp" />
 		<Unit filename="src/NaiveAlgorithm.cpp" />
