@@ -30,7 +30,7 @@ class NaiveAlgorithm: public BaseRunnableAlgorithm
     private:
         char* text;
         Logger logger;
-        BaseDataDescriptor descriptor;
+        //BaseDataDescriptor descriptor;
 };
 
 #endif // NAIVEALGORITHM_H
