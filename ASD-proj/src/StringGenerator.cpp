@@ -27,7 +27,7 @@ std::string* StringGenerator::RandomGeneration()
     logger.Log(std::to_string(textSize));
     for( int i = 0 ; i < textSize ; i++ )
     {
-        value = mAlphabet[ rand() % (mAlphabet.size() - 1) ];
+        value = mAlphabet[ rand() % (mAlphabet.size()) ];
         text->replace(i,1,value);
     }
     return text;
