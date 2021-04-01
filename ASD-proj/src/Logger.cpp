@@ -18,6 +18,6 @@ void Logger::Log(std::string message)
 void Logger::Log(std::string* message)
 {
     #ifdef DEBUG
-    std::cout<<message<<std::endl;
+    std::cout<<(*message)<<std::endl;
     #endif // DEBUG
 }
