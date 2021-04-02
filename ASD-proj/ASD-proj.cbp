@@ -41,7 +41,9 @@
 		<Unit filename="include/BaseDataDescriptor.h" />
 		<Unit filename="include/BaseRunnableAlgorithm.h" />
 		<Unit filename="include/Logger.h" />
-		<Unit filename="include/NaiveAlgorithm.h" />
+		<Unit filename="include/NaiveAlgorithm.h">
+			<Option virtualFolder="Algorithms/" />
+		</Unit>
 		<Unit filename="include/PeriodSmart.h">
 			<Option virtualFolder="Algorithms/" />
 		</Unit>
@@ -50,7 +52,9 @@
 		<Unit filename="src/BaseDataDescriptor.cpp" />
 		<Unit filename="src/BaseRunnableAlgorithm.cpp" />
 		<Unit filename="src/Logger.cpp" />
-		<Unit filename="src/NaiveAlgorithm.cpp" />
+		<Unit filename="src/NaiveAlgorithm.cpp">
+			<Option virtualFolder="Algorithms/" />
+		</Unit>
 		<Unit filename="src/PeriodSmart.cpp">
 			<Option virtualFolder="Algorithms/" />
 		</Unit>
