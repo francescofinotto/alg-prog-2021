@@ -25,11 +25,11 @@ class NaiveAlgorithm: public BaseRunnableAlgorithm
 
         void Setup() override
         {
-            StringGenerator generator(std::string("ab"),mSize,mSeed,STRING_GENERATION_ALGORITHM::HALF_RANDOM); // gnerator on stack
+            StringGenerator generator(std::string("ab"),mSize,mSeed,STRING_GENERATION_ALGORITHM::RANDOM); // gnerator on stack
 
             text = generator.Generate(); // generate string on heap
             logger.Log("Setup");
-
+            logger.Log(*text);
         };
 
 
@@ -47,7 +47,7 @@ class NaiveAlgorithm: public BaseRunnableAlgorithm
         };
 
         int Period;
-
+        std::string* GetText();
     protected:
 
     private:

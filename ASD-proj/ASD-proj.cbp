@@ -5,6 +5,7 @@
 		<Option title="ASD-proj" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
+		<Option virtualFolders="Algorithms/" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/ASD-proj" prefix_auto="1" extension_auto="1" />
@@ -23,11 +24,11 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
-					<Add option="-O2" />
 					<Add option="-DRELEASE" />
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
+					<Add option="-O3" />
 					<Add option="-s" />
 				</Linker>
 			</Target>
@@ -41,12 +42,18 @@
 		<Unit filename="include/BaseRunnableAlgorithm.h" />
 		<Unit filename="include/Logger.h" />
 		<Unit filename="include/NaiveAlgorithm.h" />
+		<Unit filename="include/PeriodSmart.h">
+			<Option virtualFolder="Algorithms/" />
+		</Unit>
 		<Unit filename="include/StringGenerator.h" />
 		<Unit filename="periodNaive.cpp" />
 		<Unit filename="src/BaseDataDescriptor.cpp" />
 		<Unit filename="src/BaseRunnableAlgorithm.cpp" />
 		<Unit filename="src/Logger.cpp" />
 		<Unit filename="src/NaiveAlgorithm.cpp" />
+		<Unit filename="src/PeriodSmart.cpp">
+			<Option virtualFolder="Algorithms/" />
+		</Unit>
 		<Unit filename="src/StringGenerator.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

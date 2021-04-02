@@ -24,3 +24,7 @@ int NaiveAlgorithm::periodNaive(std::string str)
     }
     return p;
 }
+std::string* NaiveAlgorithm::GetText()
+{
+    return text;
+}

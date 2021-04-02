@@ -24,21 +24,21 @@ std::string* StringGenerator::Generate()
 }
 std::string* StringGenerator::RandomGeneration()
 {
-    std::string* text = new std::string(mSize,'*');
+    char* txt = new char[mSize];
+    std::string* text = new std::string(txt,mSize);
     int textSize = text->size();
-    std::string value;
-
+    int alphabetSize = mAlphabet.size();
     srand(mSeed);
     for( int i = 0 ; i < textSize ; i++ )
     {
-        value = mAlphabet[ rand() % (mAlphabet.size()) ];
-        text->replace(i,1,value);
+
+        text->replace(i,1,{mAlphabet[ rand() % (alphabetSize) ]});
     }
     return text;
 }
 std::string* StringGenerator::HalfRandomGeneration()
 {
-    std::string* text = new std::string(mSize,'*');
+    std::string* text = new std::string(mSize, ' ');
     int textSize = text->size();
     std::string value;
 
