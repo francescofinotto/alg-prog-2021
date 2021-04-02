@@ -19,30 +19,46 @@ class NaiveAlgorithm: public BaseRunnableAlgorithm
             }
 
         /** Default constructor */
-        NaiveAlgorithm() { logger.Log("Created Naive Algorithm"); };
+        NaiveAlgorithm(): mSize(100), mSeed(17'450'777), Period(0) { logger.Log("Created Naive Algorithm"); };
+
+        NaiveAlgorithm(unsigned int size, unsigned int seed): mSize(size), mSeed(seed), Period(0) { logger.Log("Created Naive Algorithm"); };
 
         void Setup() override
         {
-            StringGenerator generator(std::string("abc/*"),500'000,STRING_GENERATION_ALGORITHM::RANDOM); // gnerator on stack
+            StringGenerator generator(std::string("ab"),mSize,mSeed,STRING_GENERATION_ALGORITHM::HALF_RANDOM); // gnerator on stack
 
             text = generator.Generate(); // generate string on heap
             logger.Log("Setup");
 
         };
+
+
         void Execute() override
         {
             logger.Log("Execute");
-            logger.Log(text);
+            logger.Log(*text);
+            Period = periodNaive(*text);
         };
+
+
         void* GetDataDescriptor() override
         {
 
         };
+
+        int Period;
+
     protected:
 
     private:
+
+        bool searchPeriod(std::string str, int p);
+        int periodNaive(std::string str);
+        unsigned int mSeed;
+        unsigned int mSize;
         std::string* text;
         Logger logger;
+
         //BaseDataDescriptor descriptor;
 };
 

@@ -6,21 +6,23 @@
 
 #include "Logger.h"
 
-enum STRING_GENERATION_ALGORITHM {RANDOM};
+enum STRING_GENERATION_ALGORITHM {RANDOM,HALF_RANDOM};
 class StringGenerator
 {
     public:
 
         /** Default constructor */
-        StringGenerator(std::string alphabet,int size, STRING_GENERATION_ALGORITHM algorithmType);
+        StringGenerator(std::string alphabet,unsigned int size,unsigned int seed, STRING_GENERATION_ALGORITHM algorithmType);
         ~StringGenerator();
         std::string* Generate();
     protected:
 
     private:
         std::string* RandomGeneration();
+        std::string* HalfRandomGeneration();
         std::string mAlphabet;
-        int mSize;
+        unsigned int mSize;
+        unsigned int mSeed;
         STRING_GENERATION_ALGORITHM mAlgorithm;
 };
 

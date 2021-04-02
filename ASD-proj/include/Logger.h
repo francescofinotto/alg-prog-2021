@@ -3,6 +3,11 @@
 
 #include <iostream>
 #include <string>
+/**
+*
+*   Logger utility used to log to std out
+*
+*/
 class Logger
 {
     public:

@@ -6,31 +6,6 @@ using namespace std;
 #define A 1000
 #define B 1.0647//859778233493
 
-bool searchPeriod(string str, int p)
-{
-    for(int i=0; i<str.length()-p; i++)
-    {
-        if(str[i]!=str[i+p])
-        {
-            return false;
-        }
-    }
-    return true;
-}
-
-int periodNaive(string str)
-{
-    int p;
-    for(p=1; p<str.length(); p++)
-    {
-        if(searchPeriod(str, p))
-        {
-            return p;
-        }
-    }
-    return p;
-}
-
 enum ALGORITHM_TYPES : int {PERIOD_NAIVE=0,PERIOD_SMART=1};
 
 int main()
@@ -43,27 +18,42 @@ int main()
 
     // select algorithm
     BaseRunnableAlgorithm* algorithm;
-    switch(selectedAlgorithm)
-    {
-        case ALGORITHM_TYPES::PERIOD_NAIVE:
+    unsigned int seed {1};
+    unsigned int size{100};
+    int period {0};
+    do{
+
+        switch(selectedAlgorithm)
         {
-            algorithm = new NaiveAlgorithm();
-            break;
+            case ALGORITHM_TYPES::PERIOD_NAIVE:
+            {
+                algorithm = new NaiveAlgorithm(size,seed);
+                break;
+            }
+            case ALGORITHM_TYPES::PERIOD_SMART:
+            {
+                // add algorithm here
+                break;
+            }
+            default:
+                break;
         }
-        case ALGORITHM_TYPES::PERIOD_SMART:
-        {
-            // add algorithm here
-            break;
-        }
-        default:
-            break;
-    }
 
 
-    algorithm->Setup();
+        algorithm->Setup();
 
-    // insert start rec time
-    algorithm->Execute();
+        // insert start rec time
+        algorithm->Execute();
+        period = ((NaiveAlgorithm*)algorithm)->Period;
+        std::cout << "Period = "
+                  << period
+                  << " Seed = "
+                  << seed
+                  << endl;
+        seed++;
+        size++;
+        delete algorithm;
+    }while(!(period < size/2));
     // end rec time
 
     // save data
