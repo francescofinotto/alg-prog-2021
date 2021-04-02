@@ -13,7 +13,7 @@ class NaiveAlgorithm: public BaseRunnableAlgorithm
         /** Default destructor */
         ~NaiveAlgorithm() override {
 
-            delete text; // remove text from memory
+             // remove text from memory
 
             logger.Log("Destroyed Naive Algorithm");
             }
@@ -29,15 +29,15 @@ class NaiveAlgorithm: public BaseRunnableAlgorithm
 
             text = generator.Generate(); // generate string on heap
             logger.Log("Setup");
-            logger.Log(*text);
+            logger.Log(text);
         };
 
 
         void Execute() override
         {
             logger.Log("Execute");
-            logger.Log(*text);
-            Period = periodNaive(*text);
+            logger.Log(text);
+            Period = periodNaive(text);
         };
 
 
@@ -47,7 +47,7 @@ class NaiveAlgorithm: public BaseRunnableAlgorithm
         };
 
         int Period;
-        std::string* GetText();
+        std::string GetText();
     protected:
 
     private:
@@ -56,7 +56,7 @@ class NaiveAlgorithm: public BaseRunnableAlgorithm
         int periodNaive(std::string str);
         unsigned int mSeed;
         unsigned int mSize;
-        std::string* text;
+        std::string text;
         Logger logger;
 
         //BaseDataDescriptor descriptor;

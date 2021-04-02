@@ -8,7 +8,7 @@ StringGenerator::~StringGenerator()
 {
     //ctor
 }
-std::string* StringGenerator::Generate()
+std::string StringGenerator::Generate()
 {
     switch(mAlgorithm)
     {
@@ -22,23 +22,22 @@ std::string* StringGenerator::Generate()
             break;
     }
 }
-std::string* StringGenerator::RandomGeneration()
+std::string StringGenerator::RandomGeneration()
 {
     char* txt = new char[mSize];
-    std::string* text = new std::string(txt,mSize);
-    int textSize = text->size();
     int alphabetSize = mAlphabet.size();
     srand(mSeed);
-    for( int i = 0 ; i < textSize ; i++ )
+    for( int i = 0 ; i < mSize ; i++ )
     {
 
-        text->replace(i,1,{mAlphabet[ rand() % (alphabetSize) ]});
+        txt[i] = mAlphabet[ rand() % (alphabetSize) ];
     }
+    std::string text(txt,mSize);
     return text;
 }
-std::string* StringGenerator::HalfRandomGeneration()
+std::string StringGenerator::HalfRandomGeneration()
 {
-    std::string* text = new std::string(mSize, ' ');
+    /*std::string text(mSize, ' ');
     int textSize = text->size();
     std::string value;
 
@@ -53,6 +52,17 @@ std::string* StringGenerator::HalfRandomGeneration()
         value = text->at(j);
         text->replace(i,1,value);
     }
+    return text;*/
+
+        char* txt = new char[mSize];
+    int alphabetSize = mAlphabet.size();
+    srand(mSeed);
+    for( int i = 0 ; i < mSize ; i++ )
+    {
+
+        txt[i] = mAlphabet[ rand() % (alphabetSize) ];
+    }
+    std::string text(txt,mSize);
     return text;
 }
 

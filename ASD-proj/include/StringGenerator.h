@@ -14,12 +14,12 @@ class StringGenerator
         /** Default constructor */
         StringGenerator(std::string alphabet,unsigned int size,unsigned int seed, STRING_GENERATION_ALGORITHM algorithmType);
         ~StringGenerator();
-        std::string* Generate();
+        std::string Generate();
     protected:
 
     private:
-        std::string* RandomGeneration();
-        std::string* HalfRandomGeneration();
+        std::string RandomGeneration();
+        std::string HalfRandomGeneration();
         std::string mAlphabet;
         unsigned int mSize;
         unsigned int mSeed;
