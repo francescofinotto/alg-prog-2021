@@ -11,12 +11,7 @@ class NaiveAlgorithm: public BaseRunnableAlgorithm
 {
     public:
         /** Default destructor */
-        ~NaiveAlgorithm() override {
-
-             // remove text from memory
-
-            logger.Log("Destroyed Naive Algorithm");
-            }
+        ~NaiveAlgorithm() override { logger.Log("Destroyed Naive Algorithm"); }
 
         /** Default constructor */
         NaiveAlgorithm(): mSize(100), mSeed(17'450'777), Period(0) { logger.Log("Created Naive Algorithm"); };
@@ -25,11 +20,8 @@ class NaiveAlgorithm: public BaseRunnableAlgorithm
 
         void Setup() override
         {
-            StringGenerator generator(std::string("ab"),mSize,mSeed,STRING_GENERATION_ALGORITHM::RANDOM); // gnerator on stack
-
-            text = generator.Generate(); // generate string on heap
-            logger.Log("Setup");
-            logger.Log(text);
+            StringGenerator generator(std::string("ab"),mSize,mSeed,STRING_GENERATION_ALGORITHM::HALF_RANDOM); // gnerator on stack
+            text = generator.Generate();
         };
 
 

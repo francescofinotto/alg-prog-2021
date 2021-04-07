@@ -16,7 +16,7 @@
 1617361769 source:d:\repo\alg-prog-2021\asd-proj\src\naivealgorithm.cpp
 	"NaiveAlgorithm.h"
 
-1617361780 d:\repo\alg-prog-2021\asd-proj\include\naivealgorithm.h
+1617384764 d:\repo\alg-prog-2021\asd-proj\include\naivealgorithm.h
 	<string>
 	"BaseRunnableAlgorithm.h"
 	"Logger.h"
@@ -34,7 +34,7 @@
 
 1616980359 d:\repo\alg-prog-2021\asd-proj\include\basedatadescriptor.h
 
-1617361754 source:d:\repo\alg-prog-2021\asd-proj\src\stringgenerator.cpp
+1617383960 source:d:\repo\alg-prog-2021\asd-proj\src\stringgenerator.cpp
 	"StringGenerator.h"
 
 1617361648 d:\repo\alg-prog-2021\asd-proj\include\stringgenerator.h
@@ -45,6 +45,7 @@
 1617355250 source:d:\repo\alg-prog-2021\asd-proj\src\periodsmart.cpp
 	"PeriodSmart.h"
 
-1617355477 d:\repo\alg-prog-2021\asd-proj\include\periodsmart.h
+1617384734 d:\repo\alg-prog-2021\asd-proj\include\periodsmart.h
 	<BaseRunnableAlgorithm.h>
+	<StringGenerator.h>
 

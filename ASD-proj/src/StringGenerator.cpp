@@ -37,30 +37,15 @@ std::string StringGenerator::RandomGeneration()
 }
 std::string StringGenerator::HalfRandomGeneration()
 {
-    /*std::string text(mSize, ' ');
-    int textSize = text->size();
-    std::string value;
-
-    srand(mSeed);
-    for( int i = 0 ; i < (textSize/2) ; i++ )
-    {
-        value = mAlphabet[ rand() % (mAlphabet.size()) ];
-        text->replace(i,1,value);
-    }
-    for( int i = (textSize/2),j=0 ; i < (textSize) ; i++,j++ )
-    {
-        value = text->at(j);
-        text->replace(i,1,value);
-    }
-    return text;*/
-
-        char* txt = new char[mSize];
+    char* txt = new char[mSize];
     int alphabetSize = mAlphabet.size();
     srand(mSeed);
-    for( int i = 0 ; i < mSize ; i++ )
+    for( int i = 0 ; i < mSize/2 ; i++ )
     {
 
         txt[i] = mAlphabet[ rand() % (alphabetSize) ];
+        txt[(mSize/2)+i] = txt[i];
+
     }
     std::string text(txt,mSize);
     return text;
